@@ -1,0 +1,14 @@
+{
+  "name": "inventory-mgmt",
+  "version": "1.0.0",
+  "description": "Inventory management system",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "Bryan Sharpley",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^2.0.8"
+  }
+}
