@@ -1,6 +1,9 @@
 const { app, BrowserWindow } = require('electron');
 const mongoose = require('mongoose');
 
+// Bring in Models
+const Part = require('./models/part');
+
 // Connect to MongoDB
 mongoose.connect('mongodb://localhost/test');
 const db = mongoose.connection;
