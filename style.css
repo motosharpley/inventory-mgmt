@@ -1,0 +1,12 @@
+body {
+  color: aliceblue;
+  background-color: rgb(72, 123, 153); 
+}
+button {
+  width: 160px;
+  height: 40px;
+  background-color: dimgray;
+  color: aliceblue;
+  padding: 5px;
+  margin: 1rem;
+}
