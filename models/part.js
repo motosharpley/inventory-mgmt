@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 // Part Schema
 const partSchema = mongoose.Schema({
-    title:{
+    partName:{
         type: String,
         required: true
     },
@@ -17,6 +17,10 @@ const partSchema = mongoose.Schema({
     quantity:{
       type: Number,
       required: true
+    },
+    category:{
+        type: String,
+        required: true
     }
 });
 
