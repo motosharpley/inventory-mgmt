@@ -4,6 +4,9 @@ const mongoose = require('mongoose');
 // Bring in Models
 const Part = require('./models/part');
 
+// Keep a global of the main window to prevent garbage collection
+let mainWindow = null
+
 // Connect to MongoDB
 mongoose.connect('mongodb://localhost:27017/test', {useNewUrlParser: true});
 const db = mongoose.connection;
@@ -14,12 +17,18 @@ db.once('open', function() {
 
 
 function createWindow() {
+  const windowOptions = {
+    width: 1360,
+    height: 980,
+    title: 'Inventory Management'
+  }
   // Create the browser window.
-  win = new BrowserWindow({ width: 800, height: 600 });
+  mainWindow = new BrowserWindow(windowOptions);
 
   // and load the index.html of the app.
-  win.loadFile('index.html');
+  mainWindow.loadFile('index.html');
 };
 
 // Init app window
 app.on('ready', createWindow);
+
