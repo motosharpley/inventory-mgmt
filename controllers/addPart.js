@@ -5,5 +5,5 @@ addPart.addEventListener('click', function (e) {
 	let modal = new BrowserWindow({ width: 400, height: 600, modal: true });
 
 	// and load the index.html of the app.
-	modal.loadFile('addPart.html');
+	modal.loadFile('views/addPart.html');
 });
