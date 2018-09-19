@@ -1,47 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<link rel="stylesheet" href="style.css">
-	<title>Inventory</title>
+	<link rel="stylesheet" href="assets/css/variables.css">
+	<link rel="stylesheet" href="assets/css/nativize.css">
+	<link rel="stylesheet" href="assets/css/global.css">
+	<link rel="stylesheet" href="assets/css/nav.css">	
+	<link rel="stylesheet" href="assets/css/section.css">
+	
+
+	<link rel="import" href="views/windows.html">
 </head>
 
 <body>
-	<h1>Hello World!</h1>
-	We are using node
-	<script>document.write(process.versions.node)</script>,
-	Chrome
-	<script>document.write(process.versions.chrome)</script>,
-	and Electron
-	<script>document.write(process.versions.electron)</script>.
-<hr>
-<button>Check Inventory</button>
-<button>Dashboard</button>
-<button id="addPart">Add New Part</button>
-<hr>
-<h2>Parts Categories</h2>
-<div class="categories">
-	<ul>
-		<li>Cabinets</li>
-		<li>CPU/Hard Drive/Ram</li>
-		<li>Power Supply/Wiring Harness</li>
-		<li>Printers</li>
-		<li>Card Readers</li>
-		<li>Buttons</li>
-		<li>Player Tracking</li>
-		<li>Cabinet Base</li>
-		<li>Screens</li>
-		<li>Cables/misc.</li>
-		<li>Servers</li>
-	</ul>
-</div>
 
-<script>
-	require('./controllers/addPart.js');
-</script>
+	<!-- Begin Main Side NAV -->
+	<nav class="nav js-nav">
+		<header class="nav-header">
+			<h1 class="nav-title">Inventory <strong>Manager</strong></h1>
+		</header>
+
+		<div class="nav-item u-category-windows">
+			<h5 class="nav-category">Check Inventory</h5>
+			<button type="button" id="button-windows" data-section="windows" class="nav-button">Browse by <em>Category</em></button>
+			<button type="button" id="button-search-parts" data-section="crash-hang" class="nav-button">Search <em>Parts</em></button>
+		</div>
+
+		<div class="nav-item u-category-menu">
+			<h5 class="nav-category">Incoming Orders</h5>
+			<button type="button" id="button-inventory-status" data-section="menus" class="nav-button">Check <em>Status</em> </button>
+			<button type="button" id="button-checkin" data-section="shortcuts" class="nav-button">Check-in <em>New Inventory</em></button>
+		</div>
+
+		<div class="nav-item u-category-native-ui">
+			<h5 class="nav-category">Outgoing Orders</h5>
+			<button type="button" id="button-order-status" data-section="dialogs" class="nav-button">Check <em>Status</em></button>
+			<button type="button" id="button-checkout-inventory" data-section="tray" class="nav-button">Check-out <em>Inventory</em></button>
+			<button type="button" id="button-new-order" data-section="drag" class="nav-button"><em>Add </em> New Order</button>
+		</div>
+
+		<div class="nav-item u-category-communication">
+			<h5 class="nav-category">Suppliers</h5>
+			<button type="button" id="button-suppliers" data-section="ipc" class="nav-button">Find <em>Suppliers</em></button>
+		</div>
+
+		<div class="nav-item u-category-system">
+			<h5 class="nav-category">Dashboard</h5>
+			<button type="button" id="button-app-sys-information" data-section="app-sys-information" class="nav-button">Manage <em>system information</em></button>
+			<button type="button" id="button-db-categories" data-section="clipboard" class="nav-button">Manage <em>Categories</em></button>
+			<button type="button" id="button-db-products" data-section="protocol" class="nav-button">Manage <em>Products</em></button>
+			<button type="button" id="button-db-suppliers" data-section="protocol" class="nav-button">Manage <em>Suppliers</em></button>
+		</div>
+
+		<div class="nav-item u-category-media">
+			<h5 class="nav-category">Reports</h5>
+			<button type="button" id="button-pdf" data-section="pdf" class="nav-button"><em>Print</em> to PDF</button>
+			<button type="button" id="button-desktop-capturer" data-section="desktop-capturer" class="nav-button">Take a <em>screenshot</em></button>
+		</div>
+
+		<footer class="nav-footer">
+			<button type="button" id="button-about" data-modal="about" class="nav-footer-button">About</button>
+		</footer>
+	</nav>
+	<!-- End Main Side NAV -->
+
+	<main class="content js-content"></main>
+
+	<script>
+		require('./controllers/imports.js');
+		require('./controllers/nav.js');		
+		require('./controllers/btn-controller.js');
+		require('./controllers/code-blocks.js');
+	</script>
 
 </body>
 
