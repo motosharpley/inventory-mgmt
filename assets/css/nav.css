@@ -9,6 +9,7 @@
   background-color: var(--color-bg);
   visibility: hidden;
   opacity: 0;
+  margin-right: 10px;
 }
 .nav.is-shown {
   visibility: visible;;
