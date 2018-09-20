@@ -1,5 +1,5 @@
 <template class="task-template">
-  <section id="windows-section" class="section js-section u-category-windows">
+  <section id="categories-section" class="section js-section u-category-inventory">
     <header class="section-header">
       <div class="section-wrapper">
         <h1>Browse by Category</h1>
@@ -19,79 +19,10 @@
         </ul>
       </div>
     </header>
-
-    <div class="demo">
-      <div class="demo-wrapper">
-        <button id="new-window-demo-toggle" class="js-container-target demo-toggle-button">Cabinets</button>
-        <div class="demo-box">
-          <div class="demo-controls">
-            <button class="demo-button" id="new-window">View Demo</button>
-          </div>
-          <h5>Renderer Process</h5>
-          <!-- <pre><code data-path="renderer-process/windows/create-window.js"></code></pre> -->
-
-          <div class="demo-protip">
-            <h2>ProTip</h2>
-            <strong>Use an invisible browser window to run background tasks.</strong>
-            <p>You can set a new browser window to not be shown (be invisible) in order to use that additional renderer
-              process as a kind of new thread in which to run JavaScript in the background of your app. You do this by
-              setting the <code>show</code> property to <code>false</code> when defining the new window.</p>
-            <!-- <pre><code class="language-js">var win = new BrowserWindow({width: 400, height: 225, show: false})</code></pre> -->
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="demo">
-      <div class="demo-wrapper">
-        <button id="manage-window-demo-toggle" class="js-container-target demo-toggle-button">Screens</button>
-        <div class="demo-box">
-          <div class="demo-controls">
-            <button class="demo-button" id="manage-window">View Demo</button>
-            <span class="demo-response" id="manage-window-reply"></span>
-          </div>
-          <h5>Renderer Process</h5>
-          <!-- <pre><code data-path="renderer-process/windows/manage-window.js"></code></pre> -->
-        </div>
-      </div>
-    </div>
-
-    <div class="demo">
-      <div class="demo-wrapper">
-        <button id="using-window-events-demo-toggle" class="js-container-target demo-toggle-button">CPU/Servers</button>
-        <div class="demo-box">
-          <div class="demo-controls">
-            <button class="demo-button" id="listen-to-window">View Demo</button>
-            <button class="demo-button disappear" id="focus-on-modal-window">Focus on Demo</button>
-          </div>
-          <h5>Renderer Process</h5>
-          <!-- <pre><code data-path="renderer-process/windows/using-window-events.js"></code></pre> -->
-        </div>
-      </div>
-    </div>
-
-    <div class="demo">
-      <div class="demo-wrapper">
-        <button class="js-container-target demo-toggle-button">Bill Validators</button>
-        <div class="demo-box">
-          <div class="demo-controls">
-            <button class="demo-button" id="frameless-window">View Demo</button>
-          </div>
-          <h5>Renderer Process</h5>
-          <!-- <pre><code data-path="renderer-process/windows/frameless-window.js"></code></pre> -->
-
-          <p>Windows can have a transparent background, too. By setting the <code>transparent</code> option to <code>true</code>,
-            you can also make your frameless window transparent:</p>
-          <!-- <pre><code class="language-js">var win = new BrowserWindow({transparent: true, frame: false})</code></pre> -->
-        </div>
-      </div>
-    </div>
+    <h2>Search</h2>
 
     <script type="text/javascript">
       // require('./renderer-process/windows/create-window')
-      // require('./renderer-process/windows/manage-window')
-      // require('./renderer-process/windows/using-window-events')
-      // require('./renderer-process/windows/frameless-window')
     </script>
 
   </section>
