@@ -10,8 +10,19 @@
 	<link rel="stylesheet" href="assets/css/nav.css">	
 	<link rel="stylesheet" href="assets/css/section.css">
 	
-
+	<link rel="import" href="views/check-inventory.html">
 	<link rel="import" href="views/categories.html">
+	<link rel="import" href="views/incoming-order-status.html">
+	<link rel="import" href="views/check-in-inventory.html">
+	<link rel="import" href="views/outgoing-order-status.html">
+	<link rel="import" href="views/check-out-inventory.html">
+	<link rel="import" href="views/add-order.html">
+	<link rel="import" href="views/find-suppliers.html">
+	<link rel="import" href="views/dashboard.html">
+	<link rel="import" href="views/db-categories.html">
+	<link rel="import" href="views/db-products.html">
+	<link rel="import" href="views/db-suppliers.html">
+
 </head>
 
 <body>
@@ -22,39 +33,40 @@
 			<h1 class="nav-title">Inventory <strong>Manager</strong></h1>
 		</header>
 
-		<div class="nav-item u-category-windows">
+		<div class="nav-item u-category-inventory">
 			<h5 class="nav-category">Check Inventory</h5>
-			<button type="button" id="button-windows" data-section="windows" class="nav-button">Browse by <em>Category</em></button>
-			<button type="button" id="button-search-parts" data-section="crash-hang" class="nav-button">Search <em>Parts</em></button>
+			<button type="button" id="button-check-inventory" data-section="check-inventory" class="nav-button">Check <em>Inventory</em></button>
+			<button type="button" id="button-categories" data-section="categories" class="nav-button">Browse <em>Categories</em></button>
+
 		</div>
 
-		<div class="nav-item u-category-menu">
+		<div class="nav-item u-category-incoming-orders">
 			<h5 class="nav-category">Incoming Orders</h5>
-			<button type="button" id="button-inventory-status" data-section="menus" class="nav-button">Check <em>Status</em> </button>
-			<button type="button" id="button-checkin" data-section="shortcuts" class="nav-button">Check-in <em>New Inventory</em></button>
+			<button type="button" id="button-incoming-order-status" data-section="incoming-order-status" class="nav-button">Check <em>Status</em> </button>
+			<button type="button" id="button-check-in-inventory" data-section="check-in-inventory" class="nav-button">Check-in <em>New Inventory</em></button>
 		</div>
 
-		<div class="nav-item u-category-native-ui">
+		<div class="nav-item u-category-outgoing-orders">
 			<h5 class="nav-category">Outgoing Orders</h5>
-			<button type="button" id="button-order-status" data-section="dialogs" class="nav-button">Check <em>Status</em></button>
-			<button type="button" id="button-checkout-inventory" data-section="tray" class="nav-button">Check-out <em>Inventory</em></button>
-			<button type="button" id="button-new-order" data-section="drag" class="nav-button"><em>Add </em> New Order</button>
+			<button type="button" id="button-outgoing-order-status" data-section="outgoing-order-status" class="nav-button">Check <em>Status</em></button>
+			<button type="button" id="button-check-out-inventory" data-section="check-out-inventory" class="nav-button">Check-out <em>Inventory</em></button>
+			<button type="button" id="button-add-order" data-section="add-order" class="nav-button"><em>Add </em> New Order</button>
 		</div>
 
-		<div class="nav-item u-category-communication">
+		<div class="nav-item u-category-suppliers">
 			<h5 class="nav-category">Suppliers</h5>
-			<button type="button" id="button-suppliers" data-section="ipc" class="nav-button">Find <em>Suppliers</em></button>
+			<button type="button" id="button-find-suppliers" data-section="find-suppliers" class="nav-button">Find <em>Suppliers</em></button>
 		</div>
 
-		<div class="nav-item u-category-system">
+		<div class="nav-item u-category-dashboard">
 			<h5 class="nav-category">Dashboard</h5>
-			<button type="button" id="button-app-sys-information" data-section="app-sys-information" class="nav-button">Manage <em>system information</em></button>
-			<button type="button" id="button-db-categories" data-section="clipboard" class="nav-button">Manage <em>Categories</em></button>
-			<button type="button" id="button-db-products" data-section="protocol" class="nav-button">Manage <em>Products</em></button>
-			<button type="button" id="button-db-suppliers" data-section="protocol" class="nav-button">Manage <em>Suppliers</em></button>
+			<button type="button" id="button-dashboard" data-section="dashboard" class="nav-button">Manage <em>system information</em></button>
+			<button type="button" id="button-db-categories" data-section="db-categories" class="nav-button">Manage <em>Categories</em></button>
+			<button type="button" id="button-db-products" data-section="db-products" class="nav-button">Manage <em>Products</em></button>
+			<button type="button" id="button-db-suppliers" data-section="db-suppliers" class="nav-button">Manage <em>Suppliers</em></button>
 		</div>
 
-		<div class="nav-item u-category-media">
+		<div class="nav-item u-category-reports">
 			<h5 class="nav-category">Reports</h5>
 			<button type="button" id="button-pdf" data-section="pdf" class="nav-button"><em>Print</em> to PDF</button>
 			<button type="button" id="button-desktop-capturer" data-section="desktop-capturer" class="nav-button">Take a <em>screenshot</em></button>
