@@ -10,12 +10,12 @@ const Part = require('./models/part');
 let mainWindow = null
 
 // Connect to MongoDB
-mongoose.connect('mongodb://localhost:27017/test', { useNewUrlParser: true });
-const db = mongoose.connection;
-db.on('error', console.error.bind(console, "connection error"));
-db.once('open', function () {
-  console.log('Connected to mongodb');
-});
+// mongoose.connect('mongodb://localhost:27017/test', { useNewUrlParser: true });
+// const db = mongoose.connection;
+// db.on('error', console.error.bind(console, "connection error"));
+// db.once('open', function () {
+//   console.log('Connected to mongodb');
+// });
 
 function init() {
   const shouldQuit = makeSingleInstance();
