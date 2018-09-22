@@ -2,15 +2,26 @@
   <section id="find-suppliers-section" class="section js-section u-category-suppliers">
     <header class="section-header">
       <div class="section-wrapper">
-				<h1>Find Suppliers</h1>
+        <h1>Find Suppliers</h1>
       </div>
-		</header>
+    </header>
 
     <h2>Browse</h2>
-    <h2>Search</h2>
+    <label for="filterSuppliers">Filter by:</label>
+    <select name="filterSuppliers" id="filterSuppliers">
+      <option value="category">Category</option>
+      <option value="alphabetical">Name A-Z</option>
+    </select>
+    <form action="" method="get">
+      <div class="form-group">
+        <label for="search">Search</label>
+        <input type="text" placeholder="supplier name or parts category">
+      </div>
+      <button type="submit">Search</button>
+    </form>
 
-		<script type="text/javascript">
-		
-		</script>
-	</section>
+    <script type="text/javascript">
+
+    </script>
+  </section>
 </template>
