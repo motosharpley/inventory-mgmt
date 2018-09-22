@@ -6,6 +6,8 @@ const debug = /--debug/.test(process.argv[2])
 // Bring in Models
 const Part = require('./models/part');
 const Order = require('./models/order');
+const Category = require('./models/category');
+const Supplier = require('./models/supplier');
 
 // Keep a global of the main window to prevent garbage collection
 let mainWindow = null
@@ -68,8 +70,7 @@ function init() {
 // The main window will be restored and focused instead of a second window
 // opened when a person attempts to launch a second instance.
 //
-// Returns true if the current version of the app should quit instead of
-// launching.
+// Returns true if the current version of the app should quit instead of launching.
 function makeSingleInstance() {
   if (process.mas) return false
 
