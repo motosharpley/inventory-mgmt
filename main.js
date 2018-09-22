@@ -5,17 +5,18 @@ const debug = /--debug/.test(process.argv[2])
 
 // Bring in Models
 const Part = require('./models/part');
+const Order = require('./models/order');
 
 // Keep a global of the main window to prevent garbage collection
 let mainWindow = null
 
 // Connect to MongoDB
-// mongoose.connect('mongodb://localhost:27017/test', { useNewUrlParser: true });
-// const db = mongoose.connection;
-// db.on('error', console.error.bind(console, "connection error"));
-// db.once('open', function () {
-//   console.log('Connected to mongodb');
-// });
+mongoose.connect('mongodb://localhost:27017/test', { useNewUrlParser: true });
+const db = mongoose.connection;
+db.on('error', console.error.bind(console, "connection error"));
+db.once('open', function () {
+  console.log('Connected to mongodb');
+});
 
 function init() {
   const shouldQuit = makeSingleInstance();
@@ -24,8 +25,8 @@ function init() {
   function createWindow() {
     const windowOptions = {
       width: 1360,
-      height: 980,
-      title: 'Inventory Management'
+      height: 1080,
+      title: 'Inventory Manager'
     }
     // Create the browser window.
     mainWindow = new BrowserWindow(windowOptions);
