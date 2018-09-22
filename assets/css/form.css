@@ -1,8 +1,4 @@
-body {
-  color: aliceblue;
-  background-color: rgb(72, 123, 153); 
-}
-button {
+form button {
   width: 160px;
   height: 40px;
   background-color: dimgray;
@@ -11,9 +7,6 @@ button {
   margin: 1rem;
 }
 
-.addPartModal {
-  background-color: rgb(95, 143, 170);
-}
 .form-group {
   padding: 5px;
   margin: 3px;

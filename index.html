@@ -4,12 +4,15 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<!-- Style Sheets -->
 	<link rel="stylesheet" href="assets/css/variables.css">
 	<link rel="stylesheet" href="assets/css/nativize.css">
 	<link rel="stylesheet" href="assets/css/global.css">
 	<link rel="stylesheet" href="assets/css/nav.css">	
 	<link rel="stylesheet" href="assets/css/section.css">
-	
+	<link rel="stylesheet" href="assets/css/form.css">	
+
+	<!-- html views -->
 	<link rel="import" href="views/check-inventory.html">
 	<link rel="import" href="views/categories.html">
 	<link rel="import" href="views/incoming-order-status.html">
@@ -60,7 +63,7 @@
 
 		<div class="nav-item u-category-dashboard">
 			<h5 class="nav-category">Dashboard</h5>
-			<button type="button" id="button-dashboard" data-section="dashboard" class="nav-button">Manage <em>system information</em></button>
+			<button type="button" id="button-dashboard" data-section="dashboard" class="nav-button">Manage <em>System Information</em></button>
 			<button type="button" id="button-db-categories" data-section="db-categories" class="nav-button">Manage <em>Categories</em></button>
 			<button type="button" id="button-db-products" data-section="db-products" class="nav-button">Manage <em>Products</em></button>
 			<button type="button" id="button-db-suppliers" data-section="db-suppliers" class="nav-button">Manage <em>Suppliers</em></button>
@@ -69,7 +72,6 @@
 		<div class="nav-item u-category-reports">
 			<h5 class="nav-category">Reports</h5>
 			<button type="button" id="button-pdf" data-section="pdf" class="nav-button"><em>Print</em> to PDF</button>
-			<button type="button" id="button-desktop-capturer" data-section="desktop-capturer" class="nav-button">Take a <em>screenshot</em></button>
 		</div>
 
 		<footer class="nav-footer">
@@ -84,7 +86,6 @@
 		require('./controllers/imports.js');
 		require('./controllers/nav.js');		
 		require('./controllers/btn-controller.js');
-		require('./controllers/code-blocks.js');
 	</script>
 
 </body>
