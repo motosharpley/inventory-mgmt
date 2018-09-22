@@ -1,29 +1,46 @@
 <template class="task-template">
-  <section id="db-products-section" class="section js-section u-category-dashboard">
-    <header class="section-header">
-      <div class="section-wrapper">
+	<section id="db-products-section" class="section js-section u-category-dashboard">
+		<header class="section-header">
+			<div class="section-wrapper">
 				<h1>Products DashBoard</h1>
-      </div>
+			</div>
 		</header>
 
 		<h1>Manage Products</h1>
-		<ul>
-			<li>Cabinets</li>
-			<li>Screens</li>
-			<li>Printers</li>
-			<li>Bill Validators</li>
-			<li>Player Tracking</li>
-			<li>Control Boards</li>
-			<li>Switches</li>
-			<li>KVM</li>
-			<li>Toppers</li>
-			<li>Servers/Racks</li>
-			<li>Shop Equipment</li>
-			<li>Misc.</li>
-		</ul>
+		<hr>
+		<h1>Add A New Part</h1>
+		<form action="" method="post" id="add-part-form">
+			<div class="form-group">
+				<label for="partName">Part Name</label>
+				<input type="text" name="partName">
+			</div>
+			<div class="form-group">
+				<label for="partNumber">Part Number</label>
+				<input type="text" name="partNumber">
+			</div>
+			<div class="form-group">
+				<label for="partDescription">Part Description</label>
+				<textarea name="partsDescription" cols="30" rows="10"></textarea>
+			</div>
+			<div class="form-group">
+				<label for="category">Category</label>
+				<select name="category" id="category">
+					<option value="cabinets">cabinets</option>
+					<option value="cpu-hd-ram">cpu-hd-ram</option>
+					<option value="power-supply/wiring-harness">power-supply/wiring-harness</option>
+					<option value="screens">screens</option>
+					<option value="player-tracking">player-tracking</option>
+					<option value="printers">printers</option>
+					<option value="card-reader">card-reader</option>
+				</select>
+			</div>
+			<button type="submit">Create</button>
+		</form>
 
 		<script type="text/javascript">
-		
+
+
+
 		</script>
 	</section>
 </template>

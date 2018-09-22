@@ -1,30 +1,46 @@
 <template class="task-template">
-  <section id="check-inventory-section" class="section js-section u-category-inventory">
-    <header class="section-header">
-      <div class="section-wrapper">
+	<section id="check-inventory-section" class="section js-section u-category-inventory">
+		<header class="section-header">
+			<div class="section-wrapper">
 				<h1>Check Inventory</h1>
-      </div>
+			</div>
 		</header>
+		<h2>Scan new items</h2>
+		<hr>
+		<h2>Hand key Item</h2>
+		<form action="" method="GET" id="check-inventory-form">
+			<div class="form-group">
+				<label for="partName">Part Name</label>
+				<input type="text" name="partName">
+			</div>
+			<div class="form-group">
+				<label for="partNumber">Part Number</label>
+				<input type="text" name="partNumber">
+			</div>
+			<div class="form-group">
+				<label for="quantity">Quantity</label>
+				<input type="number" name="quantity">
+			</div>
+			<div class="form-group">
+				<label for="category">Category</label>
+				<select name="category" id="category">
+					<option value="cabinets">cabinets</option>
+					<option value="cpu-hd-ram">cpu-hd-ram</option>
+					<option value="power-supply/wiring-harness">power-supply/wiring-harness</option>
+					<option value="screens">screens</option>
+					<option value="player-tracking">player-tracking</option>
+					<option value="printers">printers</option>
+					<option value="card-reader">card-reader</option>
+				</select>
+			</div>
+			<button type="submit">Get Quantity</button>
+		</form>
 
-		<h1>Browse by Category</h1>
-		<ul>
-			<li>Cabinets</li>
-			<li>Screens</li>
-			<li>Printers</li>
-			<li>Bill Validators</li>
-			<li>Player Tracking</li>
-			<li>Control Boards</li>
-			<li>Switches</li>
-			<li>KVM</li>
-			<li>Toppers</li>
-			<li>Servers/Racks</li>
-			<li>Shop Equipment</li>
-			<li>Misc.</li>
-    </ul>
-    <h2>Search</h2>
 
 		<script type="text/javascript">
-		
+
+
+
 		</script>
 	</section>
 </template>
